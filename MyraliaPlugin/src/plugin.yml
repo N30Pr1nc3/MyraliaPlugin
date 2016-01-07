@@ -1,0 +1,67 @@
+name: Akte
+version: 0.1
+author: NeoPrince
+website: http://midgard-journey.com
+main: de.myralia.pluginManagement.Myralia
+depend: [Vault] 
+commands:
+   akte:
+      description: zeigt die akte eines users an
+      usage: /akte [user]
+      permission: akte.akte
+      permission-message: keine Berechtigung
+   aktetp:
+      description: Teleportiert dich zu einem Akteneintrag
+      usage: /aktetp [Eintragsid]
+      permission: akte.akte
+      permission-message: keine Berechtigung
+   akteadd:
+      description: zeigt die akte eines users an
+      usage: /akteadd [user] [msg]
+      permission: akte.akteadd
+      permission-message: keine Berechtigung
+   aktedel:
+      description: Löscht einen Akteneintrag
+      usage: /aktedel [eintragsnummer]
+      permission: akte.lcadmin
+      permission-message: keine Berechtigung
+   passwortset:
+      description: ändert das freischaltungspasswort
+      usage: /passwortsert [passwort]
+      permission: akte.passwortset
+      permission-message: keine Berechtigung
+   lc:
+      description: Zeigt alle eigenen oder die berechtigungen eines anderen an
+      usage: /lc {user}
+      permission: akte.lc
+      permission-message: keine Berechtigung
+   lcdel:
+      description: Löscht einen Akteneintrag (alias zu aktedel)
+      usage: /lcdel [eintragsnummer]
+      permission: akte.lcadmin
+      permission-message: keine Berechtigung
+   lcadd:
+      description: fügt eine lizenz zu einem user hinzu
+      usage: /lcadd [user] [bloecke]
+      permission: akte.lcadmin
+      permission-message: keine Berechtigung
+   lcexpand:
+      description: fügt eine lizenz zu einem user hinzu
+      usage: /lcexpand [lizenz] [bloecke]
+      permission: akte.lcadmin
+      permission-message: keine Berechtigung
+   lcset:
+      description: fügt eine lizenz zu einem user hinzu
+      usage: /lcset [lizenz] [bloecke]
+      permission: akte.lcadmin
+      permission-message: keine Berechtigung
+permissions:
+   akte.freigeschaltet:
+     description: Lässt einen Spieler am chat Teilnehmen
+     default: op
+   akte.user:
+     description: spieler ohne dieses recht werden nach 12 stunden zum user gemacht
+     default: op
+   akte.lcadmin:
+     description: spieler mit diesem recht können spielern eine neue region hinzufügen 
+     default: op
