@@ -34,6 +34,15 @@ public class Akte implements MyraliaPlugin {
 		System.out.println("Lade Akten");
 		this.users=new HashMap<String, AkteUser>();
 
+		Myralia.Plugin.addCommand(new de.myralia.akte.Commands.Akte());
+		Myralia.Plugin.addCommand(new de.myralia.akte.Commands.AkteAdd());
+		Myralia.Plugin.addCommand(new de.myralia.akte.Commands.AkteDel());
+		Myralia.Plugin.addCommand(new de.myralia.akte.Commands.AkteTp());
+		Myralia.Plugin.addCommand(new de.myralia.akte.Commands.Lc());
+		Myralia.Plugin.addCommand(new de.myralia.akte.Commands.LcAdd());
+		Myralia.Plugin.addCommand(new de.myralia.akte.Commands.LcExpand());
+		Myralia.Plugin.addCommand(new de.myralia.akte.Commands.PasswortSet());
+		
 		this.schilder = new HashMap<Location, AktenSchild>();	
 		MyMySQLConnection.getSchilder();
 		this.loadPasswort();
