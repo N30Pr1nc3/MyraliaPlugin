@@ -56,7 +56,7 @@ public class Myralia extends JavaPlugin{
 	{
 		for(String commandName : this.commands.keySet())
 		{
-			if(!cmd.equals(commandName))
+			if(!cmd.getName().equals(commandName))
 			{
 				continue;
 			}
@@ -83,7 +83,7 @@ public class Myralia extends JavaPlugin{
 					sender.sendMessage("Dieses Kommando kann aus dem Spiel heraus nicht verwendet werden.");
 				}				
 			}
-			Myralia.out("Fehler 2: Offensichtlich ist der Commandsender \""+sender.getClass()+"\" nicht möglich");
+			Myralia.out("Fehler 2: Offensichtlich ist der Commandsender \""+sender.getClass()+"\" nicht mï¿½glich");
 			return false;		
 		}
 		

@@ -18,8 +18,8 @@ import net.md_5.bungee.api.ChatColor;
  
 public class MyMySQLConnection{
 private static Connection con = null;
-//private static String dbHost = "localhost"; // Hostname
-private static String dbHost = "127.0.0.1"; // Hostname
+private static String dbHost = "localhost"; // Hostname
+//private static String dbHost = "127.0.0.1"; // Hostname
 private static String dbPort = "3306";      // Port -- Standard: 3306
 private static String dbName = "minecraft_akte";   // Datenbankname
 private static String dbUser = "minecraft_akte";     // Datenbankuser
@@ -27,7 +27,7 @@ private static String dbPass = "93JQ3jR6pEhjQ9nRHsW5jtPzpynnVcnU";      // Daten
  
 	private MyMySQLConnection(){
 		try {
-			Class.forName("com.mysql.jdbc.Driver"); // Datenbanktreiber für JDBC Schnittstellen laden. 
+			Class.forName("com.mysql.jdbc.Driver"); // Datenbanktreiber fï¿½r JDBC Schnittstellen laden. 
         		// Verbindung zur JDBC-Datenbank herstellen.
         	con = DriverManager.getConnection("jdbc:mysql://"+dbHost+":"+ dbPort+"/"+dbName+"?"+"user="+dbUser+"&"+"password="+dbPass);
 		} catch (ClassNotFoundException e) {
@@ -268,7 +268,7 @@ private static String dbPass = "93JQ3jR6pEhjQ9nRHsW5jtPzpynnVcnU";      // Daten
 		        String sql ="select "; 
 		        sql = sql+"s.anzeige, ";  
 		        sql = sql+"a.id, "; 
-		        sql = sql+"concat(a.text,if(s.id=3,concat('\n"+ChatColor.GRAY+"Blöcke: "+ChatColor.BLUE+"',a.wert,'"+ChatColor.WHITE+"'),''),if(isnull(min_x) or isnull(min_z) or isnull(max_z) or isnull(max_z),'','"+ChatColor.GRAY+"\nProtection: "+ChatColor.BLUE+"ja"+ChatColor.WHITE+"')) as text, "; //concat('\nProtection xy',min_x,':',min_z,'-',max_x,':',max_z,' (',(max_x-min_x),'x',(max_z-min_z),'=',(max_x-min_x)*(max_z-min_z),')'))) as text, "; 
+		        sql = sql+"concat(a.text,if(s.id=3,concat('\n"+ChatColor.GRAY+"Blï¿½cke: "+ChatColor.BLUE+"',a.wert,'"+ChatColor.WHITE+"'),''),if(isnull(min_x) or isnull(min_z) or isnull(max_z) or isnull(max_z),'','"+ChatColor.GRAY+"\nProtection: "+ChatColor.BLUE+"ja"+ChatColor.WHITE+"')) as text, "; //concat('\nProtection xy',min_x,':',min_z,'-',max_x,':',max_z,' (',(max_x-min_x),'x',(max_z-min_z),'=',(max_x-min_x)*(max_z-min_z),')'))) as text, "; 
 		        sql = sql+"a.timestamp, ";
 		        sql = sql+"a.wert, ";
 		        sql = sql+"u.name as user, "; 
