@@ -92,7 +92,7 @@ public class EventManager implements Listener {
 			Matcher m = p.matcher(Event.getLine(3));
 			if(!m.matches()){
 				Event.setCancelled(true);			
-				Event.getPlayer().sendMessage("Die 4. Zeile muss ein gültiges Datum im folgenden");
+				Event.getPlayer().sendMessage("Die 4. Zeile muss ein gï¿½ltiges Datum im folgenden");
 				Event.getPlayer().sendMessage("Vormat enthalten");
 				Event.getPlayer().sendMessage("0000-00-00 00:00 [Jahr-Monat-Tag Stunde:Sekunde]");
 				Event.getPlayer().sendMessage("angegeben wurde '"+Event.getLine(3)+"'");
